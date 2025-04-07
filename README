@@ -1,0 +1,13 @@
+The following code is designed to be a system for automatically deciding what's the optimal order for a unit to list Malshab's for a Draft.
+The system takes as input the following parameters:
+1. A list of malshabs, already prioritized, with their corresponding characteristics (e.g gender, profile)
+2. A list of other units malshabs, non-prioritized
+3. The order in which the units gets to choose
+
+The system will act in the following way:
+1. Read all the ingest data and parse it into the designated objects
+2. Ask for a command each time, which can be one of the following:
+  a. Enforce the next pick (assign to the relevant unit move on with the choosing order)
+  b. Recommend who's your next pick based on all pre-assigned parameters
+  c. Skip the next choice of the following unit (if necessary for some reason, e.g a unit calling an ID of someone that is not on your list)
+3. The system will also document all actions done, in case a mistake is made, so we can recover it from a given point
